@@ -1,29 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="guiPane" minHeight="99.0" minWidth="160.0" prefHeight="380.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.comp4420.film_tracker.view.codebehind.MainWindow">
-   <children>
-      <ListView fx:id="watchedItems" layoutX="14.0" layoutY="45.0" prefHeight="323.0" prefWidth="228.0" />
-      <Label layoutX="56.0" layoutY="14.0" text="Watched Items">
-         <font>
-            <Font name="System Bold" size="22.0" />
-         </font>
-      </Label>
-      <Button layoutX="249.0" layoutY="46.0" mnemonicParsing="false" onAction="#addItem" text="+">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="249.0" layoutY="77.0" mnemonicParsing="false" onAction="#removeItem" prefHeight="30.0" prefWidth="28.0" text="-">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-   </children>
-</AnchorPane>
+<BorderPane fx:id="guiPane" minHeight="800.0" minWidth="1000.0" prefHeight="800.0" prefWidth="1000.0"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.westga.comp4420.film_tracker.view.codebehind.MainWindow">
+   <top>
+      <VBox alignment="CENTER" spacing="8.0" BorderPane.alignment="CENTER">
+         <padding>
+            <javafx.geometry.Insets top="28.0" right="24.0" bottom="24.0" left="24.0" />
+         </padding>
+         <Label text="Film Tracker">
+            <font>
+               <Font name="System Bold" size="30.0" />
+            </font>
+         </Label>
+         <Label text="Your watched films and series" />
+      </VBox>
+   </top>
+   <center>
+      <HBox alignment="CENTER" spacing="24.0" BorderPane.alignment="CENTER">
+         <padding>
+            <javafx.geometry.Insets top="0.0" right="40.0" bottom="40.0" left="40.0" />
+         </padding>
+         <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+            <Label text="Films">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <ListView fx:id="filmItems" VBox.vgrow="ALWAYS" />
+         </VBox>
+         <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+            <Label text="Series">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <ListView fx:id="seriesItems" VBox.vgrow="ALWAYS" />
+         </VBox>
+      </HBox>
+   </center>
+</BorderPane>
