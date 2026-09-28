@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane fx:id="guiPane" minHeight="99.0" minWidth="160.0" prefHeight="380.0" prefWidth="286.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.comp4420.film_tracker.view.codebehind.AddItemWindow" />
+<VBox alignment="CENTER_LEFT" spacing="10.0" xmlns="http://javafx.com/javafx/23"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.westga.comp4420.film_tracker.view.codebehind.AddItemWindow">
+   <padding>
+      <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+   </padding>
+   <HBox spacing="10.0">
+      <ToggleButton fx:id="filmButton" mnemonicParsing="false" text="Film">
+         <toggleGroup>
+            <ToggleGroup fx:id="itemTypeGroup" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="seriesButton" mnemonicParsing="false" text="Series"
+                    toggleGroup="$itemTypeGroup" />
+   </HBox>
+   <Label text="Title" />
+   <TextField fx:id="titleField" promptText="Film or series title" />
+   <Label text="Rating (1 to 5)" />
+   <Spinner fx:id="ratingSpinner" editable="true" />
+   <Label text="Description" />
+   <TextArea fx:id="descriptionField" prefRowCount="4" promptText="Optional description" wrapText="true" />
+   <HBox alignment="CENTER_RIGHT" spacing="10.0">
+      <Button mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+      <Button defaultButton="true" mnemonicParsing="false" onAction="#addItem" text="Add" />
+   </HBox>
+</VBox>
