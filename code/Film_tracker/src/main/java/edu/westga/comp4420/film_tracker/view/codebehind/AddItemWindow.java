@@ -46,6 +46,11 @@ public class AddItemWindow {
 	}
 
 
+	/**
+	 * Sets the handler to be called when an item is added.
+	 *
+	 * @param itemAddedHandler the handler to set
+	 */
 	public void setItemAddedHandler(Consumer<WatchedItem> itemAddedHandler) {
 		this.itemAddedHandler = itemAddedHandler;
 	}

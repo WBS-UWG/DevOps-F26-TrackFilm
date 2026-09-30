@@ -3,7 +3,7 @@ package edu.westga.comp4420.film_tracker;
 /**
  * Entry point for the executable
  *
- * @author	Comp 4420
+ * @author	william sitt
  * @version Fall 2026
  */
 public class Launcher {
