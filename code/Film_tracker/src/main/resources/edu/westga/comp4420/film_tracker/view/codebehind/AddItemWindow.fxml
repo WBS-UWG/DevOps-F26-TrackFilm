@@ -11,20 +11,17 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER_LEFT" spacing="10.0" xmlns="http://javafx.com/javafx/23"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="edu.westga.comp4420.film_tracker.view.codebehind.AddItemWindow">
+<VBox alignment="CENTER_LEFT" spacing="10.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.comp4420.film_tracker.view.codebehind.AddItemWindow">
    <padding>
-      <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <HBox spacing="10.0">
-      <ToggleButton fx:id="filmButton" mnemonicParsing="false" text="Film">
+      <ToggleButton fx:id="filmButton" mnemonicParsing="false" selected="true" text="Film">
          <toggleGroup>
             <ToggleGroup fx:id="itemTypeGroup" />
          </toggleGroup>
       </ToggleButton>
-      <ToggleButton fx:id="seriesButton" mnemonicParsing="false" text="Series"
-                    toggleGroup="$itemTypeGroup" />
+      <ToggleButton fx:id="seriesButton" mnemonicParsing="false" text="Series" toggleGroup="$itemTypeGroup" />
    </HBox>
    <Label text="Title" />
    <TextField fx:id="titleField" promptText="Film or series title" />
