@@ -82,4 +82,16 @@ public class MainWindow {
 		});
 		addItemStage.showAndWait();
 	}
+
+	@FXML
+	private void openWatchlist() throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("WatchlistWindow.fxml"));
+		Parent parent = loader.load();
+		Stage watchlistStage = new Stage();
+		watchlistStage.setTitle("My Watchlist");
+		watchlistStage.initModality(Modality.WINDOW_MODAL);
+		watchlistStage.initOwner(this.guiPane.getScene().getWindow());
+		watchlistStage.setScene(new javafx.scene.Scene(parent));
+		watchlistStage.showAndWait();
+	}
 }

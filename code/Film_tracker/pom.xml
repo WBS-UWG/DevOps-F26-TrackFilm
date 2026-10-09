@@ -163,12 +163,24 @@
                             <goal>shade</goal>
                         </goals>  
 						<configuration>
-            <transformers>
-              <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                <mainClass>edu.westga.comp4420.film_tracker.Launcher</mainClass>
-              </transformer>
-            </transformers>
-          </configuration>
+							<artifactSet>
+								<excludes>
+									<exclude>org.openjfx:*</exclude>
+								</excludes>
+							</artifactSet>
+							<filters>
+								<filter>
+									<artifact>*:*</artifact>
+									<excludes>
+										<exclude>META-INF/*.SF</exclude>
+										<exclude>META-INF/*.DSA</exclude>
+										<exclude>META-INF/*.RSA</exclude>
+										<exclude>module-info.class</exclude>
+									</excludes>
+								</filter>
+							</filters>
+							
+						</configuration>
                         <!--configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <filters>
