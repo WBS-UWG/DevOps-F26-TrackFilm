@@ -10,7 +10,7 @@ import edu.westga.comp4420.film_tracker.model.WatchedItem;
 /**
  * Tests for the WatchedItem model.
  *
- * @author Comp 4420
+ * @author William Sitt
  * @version Fall 2026
  */
 public class WatchedItemTest {
