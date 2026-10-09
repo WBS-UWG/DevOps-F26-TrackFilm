@@ -92,6 +92,14 @@ public class MainWindow {
 		watchlistStage.initModality(Modality.WINDOW_MODAL);
 		watchlistStage.initOwner(this.guiPane.getScene().getWindow());
 		watchlistStage.setScene(new javafx.scene.Scene(parent));
+		WatchlistWindow controller = loader.getController();
+		controller.setWatchedItemAddedHandler(item -> {
+			if (item.isSeries()) {
+				this.seriesItems.getItems().add(item);
+			} else {
+				this.filmItems.getItems().add(item);
+			}
+		});
 		watchlistStage.showAndWait();
 	}
 }

@@ -25,6 +25,18 @@ public class WatchedItemTest {
 		assertEquals("Inception", item.getTitle());
 		assertEquals(5, item.getRating());
 		assertEquals("A classic.", item.getDescription());
+		assertEquals(false, item.isSeries());
+	}
+
+	/**
+	 * Verifies that a series keeps its type.
+	 */
+	@Test
+	public void seriesTypeStoredCorrectly() {
+		WatchedItem item = new WatchedItem("Breaking Bad", 5, "A classic series.", true);
+
+		assertEquals("Breaking Bad", item.getTitle());
+		assertEquals(true, item.isSeries());
 	}
 
 	/**

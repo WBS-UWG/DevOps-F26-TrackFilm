@@ -55,6 +55,18 @@ public class AddItemWindow {
 		this.itemAddedHandler = itemAddedHandler;
 	}
 
+	/**
+	 * Prefills the dialog with information from a watchlist item.
+	 *
+	 * @param title the item's title
+	 * @param series true when the item is a series
+	 */
+	public void prefillItem(String title, boolean series) {
+		this.titleField.setText(title);
+		this.seriesButton.setSelected(series);
+		this.filmButton.setSelected(!series);
+	}
+
 	@FXML
 	private void addItem() {
 		String title = this.titleField.getText().trim();
@@ -80,7 +92,8 @@ public class AddItemWindow {
 			return;
 		}
 
-		WatchedItem item = new WatchedItem(title, rating, this.descriptionField.getText().trim());
+		WatchedItem item = new WatchedItem(title, rating, this.descriptionField.getText().trim(),
+				this.seriesButton.isSelected());
 		this.itemAddedHandler.accept(item);
 		this.dialogStage.close();
 	}
