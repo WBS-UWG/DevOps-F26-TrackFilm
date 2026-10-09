@@ -76,7 +76,7 @@ public class WatchlistWindow {
 			Parent parent = loader.load();
 			AddItemWindow controller = loader.getController();
 			Stage addItemStage = new Stage();
-			addItemStage.setTitle("Ajouter un film ou une série");
+			addItemStage.setTitle("Add a film or series");
 			addItemStage.initModality(Modality.WINDOW_MODAL);
 			addItemStage.initOwner(this.guiPane.getScene().getWindow());
 			addItemStage.setScene(new Scene(parent));
@@ -100,7 +100,7 @@ public class WatchlistWindow {
 		Parent parent = loader.load();
 		AddWatchlistItemWindow controller = loader.getController();
 		Stage addItemStage = new Stage();
-		addItemStage.setTitle("Ajouter à la liste à voir");
+		addItemStage.setTitle("Add to the watchlist");
 		addItemStage.initModality(Modality.WINDOW_MODAL);
 		addItemStage.initOwner(this.guiPane.getScene().getWindow());
 		addItemStage.setScene(new Scene(parent));
