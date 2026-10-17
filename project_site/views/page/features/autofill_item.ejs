@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Film Tracker - Wishlist Auto-fill</title>
+		<meta name="description" content="Learn how to automatically fill in movie and series details when marking a wishlist item as watched">
+		<meta name="author" content="Comp 2300">
+		<!-- Bootstrap CSS Reset -->
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/documentation">Documentation</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<!-- Content -->
+		<div class="container">
+			<h1 class="mt-4">Automatically Fill in Watched Items</h1>
+
+			<h2 class="mt-4">Overview</h2>
+			<p>
+				Film Tracker makes it easier to move an item from your wishlist to your watched collection.
+				When you mark a film or series as watched directly from your wishlist, the application
+				automatically opens the watched-item modal and fills in the content type and title.
+				This saves time and avoids entering the same information twice.
+			</p>
+
+			<h2 class="mt-4">How to Use This Feature</h2>
+
+			<h3 class="mt-4">1. Mark an Item as Watched</h3>
+
+			<p>
+				Open your wishlist and find the film or series you have watched.
+				Select the option to mark that item as watched.
+			</p>
+
+			<img
+				src="/images/wishlist-mark-watched.png"
+				alt="Wishlist interface showing the option to mark an item as watched"
+				class="img-fluid rounded border mb-3"
+			>
+
+			<h3 class="mt-4">2. Check the Automatically Filled Information</h3>
+
+			<p>
+				The application will automatically open the modal used to add a watched film or series.
+				The content type and title will already be filled in based on the item selected in your wishlist.
+			</p>
+
+			<p>
+				For example, if you mark a series called <em>Breaking Bad</em> as watched,
+				the modal will automatically select "Series" as the content type and fill in
+				"Breaking Bad" as the title. The same behavior applies to films.
+			</p>
+
+			<img
+				src="/images/watched-item-autofill.png"
+				alt="Watched-item modal with the content type and title automatically filled in"
+				class="img-fluid rounded border mb-3"
+			>
+
+			<h3 class="mt-4">3. Complete the Remaining Information</h3>
+
+			<p>
+				Check the automatically filled information and complete the remaining fields,
+				such as the rating or any other required details.
+				Once everything is ready, confirm the action to add the item to your watched collection.
+			</p>
+
+			<h3 class="mt-4">Benefits</h3>
+
+			<ul>
+				<li>No need to enter the title manually a second time.</li>
+				<li>The correct content type (film or series) is selected automatically.</li>
+				<li>A faster and simpler way to move items from your wishlist to your watched collection.</li>
+				<li>Less risk of entering incorrect information.</li>
+			</ul>
+
+			<p class="mt-4 mb-4">
+				<a href="/documentation">Back to Documentation</a>
+			</p>
+		</div>
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+	</body>
+</html>

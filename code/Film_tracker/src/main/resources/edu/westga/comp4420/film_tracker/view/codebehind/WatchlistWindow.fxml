@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="guiPane" minHeight="650.0" minWidth="900.0" prefHeight="650.0" prefWidth="900.0"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.westga.comp4420.film_tracker.view.codebehind.WatchlistWindow">
+   <top>
+      <VBox alignment="CENTER" spacing="8.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="24.0" right="24.0" bottom="20.0" left="24.0" />
+         </padding>
+         <Label text="My Watchlist">
+            <font>
+               <Font name="System Bold" size="28.0" />
+            </font>
+         </Label>
+         <Label text="You planned watching list" />
+         <Button mnemonicParsing="false" onAction="#openAddItem" text="Add a film or series" />
+      </VBox>
+   </top>
+   <center>
+      <VBox spacing="10.0" BorderPane.alignment="CENTER">
+      <padding>
+         <Insets top="0.0" right="40.0" bottom="30.0" left="40.0" />
+      </padding>
+      <Label text="Films or series you want to watch">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+      </Label>
+      <ListView fx:id="watchlistItems" VBox.vgrow="ALWAYS" />
+      </VBox>
+   </center>
+</BorderPane>

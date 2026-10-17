@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Film Tracker</title>
+		<meta name="description" content="Quickstart guide for Film Tracker">
+		<meta name="author" content="Comp 2300">
+		<!-- Bootstrap CSS Reset -->
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/documentation">Documentation</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<!-- Content -->
+		<div class="container">
+			<h1 class="mt-4">Quickstart</h1>
+			<p>
+				Follow these steps to download, set up, and run Film Tracker on your computer.
+			</p>
+
+			<h2 class="mt-4">1. Clone the Repository</h2>
+			<p>
+				First, clone the Film Tracker repository from GitHub to download the project files.
+				Open a terminal and run the following command:
+			</p>
+			<code>git clone git@github.com:WBS-UWG/DevOps-F26-TrackFilm.git</code>
+
+			<h2 class="mt-4">2. Navigate to the Project Folder</h2>
+			<p>
+				Use the terminal to navigate to the folder containing the Film Tracker project.
+				If the application is inside a subfolder, navigate to that folder as well.
+			</p>
+			<code>cd DevOps-F26-TrackFilm/code/Film_tracker/</code>
+			<br><br>
+			<p>
+				Make sure you are in the directory containing the project's
+				<code>pom.xml</code> file before continuing.
+			</p>
+
+			<h2 class="mt-4">3. Run the Application</h2>
+			<p>
+				Once you are in the correct directory, run the following Maven command
+				to start Film Tracker:
+			</p>
+			<code>mvn javafx:run</code>
+			<br><br>
+			<p>
+				Maven will compile the project, resolve the required dependencies,
+				and launch the JavaFX application.
+			</p>
+
+			<h2 class="mt-4">Requirements</h2>
+			<p>Before running the application, make sure you have:</p>
+			<ul>
+				<li>Git installed to clone the repository.</li>
+				<li>A compatible Java Development Kit (JDK).</li>
+				<li>Apache Maven installed and available in your terminal.</li>
+				<li>An internet connection to download project dependencies if needed.</li>
+			</ul>
+
+			<h2 class="mt-4">What it look like in image</h2>
+			<img src="/images/quickstart.png" alt="Film Tracker quickstart" width="600">
+			<h2 class="mt-4">Common Issues</h2>
+			<ul>
+				<li>
+					<strong>Command not found:</strong>
+					Make sure Git, Java, and Maven are installed and available in your system's PATH.
+				</li>
+				<li>
+					<strong>Build errors:</strong>
+					Check that you are running the command from the directory containing
+					the project's <code>pom.xml</code> file.
+				</li>
+			</ul>
+
+			<p class="mt-4 mb-4">
+				<a href="/documentation">Back to Documentation</a>
+			</p>
+		</div>
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+	</body>
+</html>
