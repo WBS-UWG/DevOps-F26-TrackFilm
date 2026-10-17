@@ -50,7 +50,7 @@ public class WatchlistWindow {
 				} else {
 					Label title = new Label((item.isSeries() ? "Série : " : "Film : ") + item.getTitle());
 					title.setFont(Font.font("System", FontWeight.BOLD, 15.0));
-					Button watchedButton = new Button("Noter comme vu");
+					Button watchedButton = new Button("Mark as watched");
 					watchedButton.setOnAction(event -> WatchlistWindow.this.markAsWatched(item));
 					HBox row = new HBox(10.0, title, watchedButton);
 					row.setPrefWidth(500.0);
