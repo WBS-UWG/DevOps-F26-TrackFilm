@@ -1,0 +1,83 @@
+package edu.westga.comp4420.film_tracker.model;
+
+/**
+ * Stores information for a single watched film or series.
+ *
+ * @author	william sitt
+ * @version Fall 2026
+ */
+public final class WatchedItem {
+
+	private final String title;
+	private final int rating;
+	private final String description;
+	private final boolean series;
+
+	/**
+	 * Creates a watched item (can be a film or a series).
+	 *
+	 * @param title the item's title
+	 * @param rating the item's rating, from 1 to 5
+	 * @param description the item's description
+	 */
+	public WatchedItem(String title, int rating, String description) {
+		this(title, rating, description, false);
+	}
+
+	/**
+	 * Creates a watched item (can be a film or a series).
+	 *
+	 * @param title the item's title
+	 * @param rating the item's rating, from 1 to 5
+	 * @param description the item's description
+	 * @param series true when the item is a series
+	 */
+	public WatchedItem(String title, int rating, String description, boolean series) {
+		if (rating < 1 || rating > 5) {
+			throw new IllegalArgumentException("Rating must be between 1 and 5.");
+		}
+		if (title == null || title.trim().isEmpty()) {
+			throw new IllegalArgumentException("Title cannot be null or empty.");
+		}
+		this.title = title;
+		this.rating = rating;
+		this.description = description;
+		this.series = series;
+	}
+
+	/**
+	 * Gets the item's title.
+	 *
+	 * @return the title
+	 */
+	public String getTitle() {
+		return this.title;
+	}
+
+	/**
+	 * Gets the item's rating.
+	 *
+	 * @return the rating from 1 to 5
+	 */
+	public int getRating() {
+		return this.rating;
+	}
+
+	/**
+	 * Gets the item's description.
+	 *
+	 * @return the description
+	 */
+	public String getDescription() {
+		return this.description;
+	}
+
+	/**
+	 * Indicates whether the item is a series.
+	 *
+	 * @return true when the item is a series
+	 */
+	public boolean isSeries() {
+		return this.series;
+	}
+}
