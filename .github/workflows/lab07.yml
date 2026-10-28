@@ -24,17 +24,17 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: 'Lab6/package-lock.json' 
+        cache-dependency-path: './Lab6/package-lock.json' 
     - name: Pin npm version
       run: npm install -g npm@11.6.2
     - run: |
         echo Running Automated Install Process for Project
-        cd "Lab6/"
+        cd "./Lab6/"
         npm ci
         cd ../..
     - run: |
         echo Building Project
-        cd "Lab6/"
+        cd "./Lab6/"
         npm run build --if-present
         cd ../..
     - run: |
